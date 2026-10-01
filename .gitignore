@@ -1,0 +1,4 @@
+tools/roman-map/*.geojson
+__pycache__/
+.claude/settings.local.json
+.claude/launch.json

@@ -1,0 +1,42 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body {
+  margin: 0; min-height: 100dvh; color: #1f2a36; background: #f4f1ea;
+  font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 30px env(safe-area-inset-left);
+}
+.wrap { max-width: 980px; margin: 0 auto; padding: 18px 18px 0; }
+header.top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+header.top h1 { margin: 0; font-size: 30px; flex: 1; }
+header.top a { color: inherit; font-size: 15px; }
+.sub { color: #66717d; margin: 0 0 18px; font-size: 17px; }
+
+.grades { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 26px; }
+.grade-btn {
+  display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff;
+  background: var(--c); border-radius: 22px; padding: 22px 24px; box-shadow: 0 3px 10px #0002;
+  font-size: 30px; font-weight: bold;
+}
+.grade-btn .e { font-size: 46px; }
+.grade-btn small { display: block; font-size: 16px; font-weight: normal; opacity: .9; }
+
+section.grade { margin: 6px 0 28px; }
+section.grade h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; font-size: 26px; color: var(--c); }
+.apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.app {
+  background: #fff; border-radius: 20px; box-shadow: 0 2px 8px #0002; overflow: hidden;
+  border-top: 8px solid var(--c); display: flex; flex-direction: column;
+}
+.app a.open { display: block; text-decoration: none; color: inherit; padding: 16px 18px 12px; flex: 1; }
+.app .icon { font-size: 52px; line-height: 1; }
+.app h3 { margin: 8px 0 2px; font-size: 23px; }
+.app .subject { color: var(--c); font-weight: bold; font-size: 15px; }
+.app p { margin: 8px 0 0; font-size: 16px; line-height: 1.4; color: #44505c; }
+.app .stars { margin-top: 10px; font-size: 15px; color: #8a6d00; }
+.app .bar { height: 8px; background: #eee5cc; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+.app .bar > div { height: 100%; background: #f2b705; }
+.app .go { display: inline-block; margin-top: 12px; background: var(--c); color: #fff; border-radius: 12px; padding: 9px 18px; font-weight: bold; font-size: 17px; }
+.app details { border-top: 1px solid #eee; padding: 8px 18px 12px; font-size: 15px; }
+.app summary { cursor: pointer; color: #66717d; }
+.app details a { display: block; margin: 6px 0; color: var(--c); }
+.empty { color: #66717d; font-style: italic; }
+footer { color: #8a949e; font-size: 13px; text-align: center; margin-top: 20px; }
