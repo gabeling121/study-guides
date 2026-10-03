@@ -52,6 +52,16 @@ tools/roman-map/          build.py for the Roman map data (needs Natural Earth g
 10. **Report** to the parent: the guide link, the grade page link, what each tab does, anything added
     beyond the sheet, and what wasn't tested (e.g. real touch on her device).
 
+## Working without a browser (Codex cloud and similar sandboxes)
+
+- You may not have a browser or internet. Still check what you can: `node --check <file>.js` on every
+  JS file you touched, `python -m json.tool docs/apps.json`, and that every path in `apps.json` exists.
+  Read through the code paths for each tab carefully.
+- Say clearly in your summary what you could NOT test, so the parent knows to check it on the live site.
+- Deliver as a pull request into `main` if you can't push directly. Pages only updates after it is merged.
+  The PDFs are made by the `Make printables` workflow after the merge; you don't need to make them.
+- If you can't see an attached image clearly enough to read every word, ask for a sharper photo.
+
 ## Standard features (what parents liked -- keep these)
 
 - **Learn** tab: tap anything to see its facts; a "hide labels" test-yourself switch.
