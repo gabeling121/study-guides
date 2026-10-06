@@ -1,7 +1,17 @@
 {
   "grades": [
-    { "id": "7th-grade", "name": "7th Grade", "color": "#8c1c22", "emoji": "🏛️" },
-    { "id": "4th-grade", "name": "4th Grade", "color": "#2a5a8c", "emoji": "🌎" }
+    {
+      "id": "7th-grade",
+      "name": "7th Grade",
+      "color": "#8c1c22",
+      "emoji": "🏛️"
+    },
+    {
+      "id": "4th-grade",
+      "name": "4th Grade",
+      "color": "#2a5a8c",
+      "emoji": "🌎"
+    }
   ],
   "apps": [
     {
@@ -12,12 +22,31 @@
       "emoji": "🗺️",
       "description": "Find, name, and spell 20 places on two maps of the Roman world.",
       "added": "2026-09-26",
-      "stats": { "key": "rmq_stats", "total": 20 },
+      "stats": {
+        "key": "rmq_stats",
+        "total": 20
+      },
       "printables": [
-        { "title": "Map 1 (West) -- blank", "file": "Roman Map 1 - West (p24) - Blank.pdf", "hash": "print=blank&map=west" },
-        { "title": "Map 1 (West) -- answer key", "file": "Roman Map 1 - West (p24) - Answer Key.pdf", "hash": "print=key&map=west" },
-        { "title": "Map 2 (East) -- blank", "file": "Roman Map 2 - East (p25) - Blank.pdf", "hash": "print=blank&map=east" },
-        { "title": "Map 2 (East) -- answer key", "file": "Roman Map 2 - East (p25) - Answer Key.pdf", "hash": "print=key&map=east" }
+        {
+          "title": "Map 1 (West) -- blank",
+          "file": "Roman Map 1 - West (p24) - Blank.pdf",
+          "hash": "print=blank&map=west"
+        },
+        {
+          "title": "Map 1 (West) -- answer key",
+          "file": "Roman Map 1 - West (p24) - Answer Key.pdf",
+          "hash": "print=key&map=west"
+        },
+        {
+          "title": "Map 2 (East) -- blank",
+          "file": "Roman Map 2 - East (p25) - Blank.pdf",
+          "hash": "print=blank&map=east"
+        },
+        {
+          "title": "Map 2 (East) -- answer key",
+          "file": "Roman Map 2 - East (p25) - Answer Key.pdf",
+          "hash": "print=key&map=east"
+        }
       ]
     },
     {
@@ -28,10 +57,46 @@
       "emoji": "🌋",
       "description": "Learn the layers of the Earth, label the diagram, and master the facts.",
       "added": "2026-09-30",
-      "stats": { "key": "elq_stats", "total": 60 },
+      "stats": {
+        "key": "elq_stats",
+        "total": 60
+      },
       "printables": [
-        { "title": "Blank diagram", "file": "Earth's Layers - Blank Diagram.pdf", "hash": "print=blank" },
-        { "title": "Answer key", "file": "Earth's Layers - Answer Key.pdf", "hash": "print=key" }
+        {
+          "title": "Blank diagram",
+          "file": "Earth's Layers - Blank Diagram.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Answer key",
+          "file": "Earth's Layers - Answer Key.pdf",
+          "hash": "print=key"
+        }
+      ]
+    },
+    {
+      "grade": "7th-grade",
+      "id": "sumer",
+      "title": "Mesopotamia & Sumer",
+      "subject": "Social Studies",
+      "emoji": "🏛️",
+      "description": "The first civilization: the two rivers, city-states, ziggurats, cuneiform, and Sumerian inventions.",
+      "added": "2026-10-06",
+      "stats": {
+        "key": "sumer_stats",
+        "total": 115
+      },
+      "printables": [
+        {
+          "title": "Key words worksheet",
+          "file": "Mesopotamia & Sumer - Key Words Worksheet.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Key words answer key",
+          "file": "Mesopotamia & Sumer - Key Words Answer Key.pdf",
+          "hash": "print=key"
+        }
       ]
     }
   ]
