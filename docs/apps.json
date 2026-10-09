@@ -98,6 +98,31 @@
           "hash": "print=key"
         }
       ]
+    },
+    {
+      "grade": "7th-grade",
+      "id": "suburani-1",
+      "title": "Suburani Chapter 1",
+      "subject": "Latin",
+      "emoji": "🏛️",
+      "description": "Match 25 Latin words, quiz both directions, and practice written answers with macron buttons.",
+      "added": "2026-10-08",
+      "stats": {
+        "key": "suburani1_stats",
+        "total": 100
+      },
+      "printables": [
+        {
+          "title": "Vocabulary worksheet",
+          "file": "Suburani Chapter 1 - Worksheet.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Answer key",
+          "file": "Suburani Chapter 1 - Answer Key.pdf",
+          "hash": "print=key"
+        }
+      ]
     }
   ]
 }
