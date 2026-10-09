@@ -339,7 +339,7 @@
     ]
   }
 ];
-  let direction = "both", requireMacrons = false;
+  let direction = "le", requireMacrons = false;
   const TOPICS = VOCAB.map(v => ({id:v.id,name:v.latin,color:"#8c1c22",facts:[v.english]}));
   const KEYWORDS = [];
   const Q = VOCAB.flatMap(v => ["quiz", "spell"].flatMap(mode => ["le", "el"].map(dir => ({
@@ -384,9 +384,9 @@
 
   function startScreen(mode) {
     const all = ofMode(mode), weak = all.filter(q => stat(q.id).box < MASTER), size = Math.min(10, all.length);
-    panel.innerHTML = `<h2>${INFO[mode][0]}</h2><p>${INFO[mode][1]}</p>
+    panel.innerHTML = `<h2>${INFO[mode][0]}</h2><p>${mode === "spell" && direction === "le" ? "Read the Latin and type its English meaning from memory. No word bank. Spelling counts; capitals do not." : INFO[mode][1]}</p>
       <p><label>Direction: <select id="direction"><option value="both">Both directions</option><option value="le">Latin to English</option><option value="el">English to Latin</option></select></label></p>
-      ${mode === "spell" ? `<p><label><input type="checkbox" id="macron-setting" ${requireMacrons ? "checked" : ""}> Require macrons</label></p>` : ""}
+      ${mode === "spell" && direction !== "le" ? `<p><label><input type="checkbox" id="macron-setting" ${requireMacrons ? "checked" : ""}> Require macrons</label></p>` : ""}
       <button class="btn primary" id="go">Start (${size} questions)</button>
       <button class="btn" id="go-all">All ${all.length} questions</button>
       ${all.some(q => stats[q.id]) && weak.length && weak.length < all.length ? `<button class="btn" id="go-weak">Practice weak spots (${weak.length})</button>` : ""}`;
@@ -457,7 +457,7 @@
       const q = r.qs[r.i]; r.wrong = false; r.done = false;
       panel.innerHTML = `${header(r)}<div class="big">${esc(q.prompt)}</div>
         <label for="ans">Your answer</label><input class="answer" id="ans" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">
-        <div class="row" aria-label="Insert a vowel with a macron">${[..."āēīōū"].map(c=>`<button class="btn macron" data-char="${c}" aria-label="Insert ${c}">${c}</button>`).join("")}</div><p class="muted">Macrons ${requireMacrons ? "required" : "optional"}. Any listed form qualifies.</p>
+        ${q.dir === "el" ? `<div class="row" aria-label="Insert a vowel with a macron">${[..."āēīōū"].map(c=>`<button class="btn macron" data-char="${c}" aria-label="Insert ${c}">${c}</button>`).join("")}</div><p class="muted">Macrons ${requireMacrons ? "required" : "optional"}. Any listed form qualifies.</p>` : `<p class="muted">Type an English meaning. No word bank.</p>`}
         <button class="btn primary" id="check">Check</button><div class="fb" id="fb"></div><div id="after"></div>`;
       const inp = panel.querySelector("#ans");
       panel.querySelectorAll("[data-char]").forEach(b => {
@@ -529,7 +529,7 @@
     modeObj.enter();
   }
   document.querySelectorAll("#modes button").forEach(b => b.onclick = () => setMode(b.dataset.mode));
-  setMode("learn");
+  setMode("spell");
   const ph = new URLSearchParams(location.hash.slice(1)).get("print");   // index.html#print=blank or #print=key
   if (ph) printSheet(ph === "key");
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
