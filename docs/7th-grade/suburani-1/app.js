@@ -339,6 +339,17 @@
     ]
   }
 ];
+  // Accepted equivalents supplement the sheet without changing the Learn cards.
+  const ENGLISH_EQUIVALENTS = {
+    t7: ["apartment block", "block of flats"],
+    t9: ["select", "to select"],
+    t13: ["dad", "daddy"],
+    t14: ["unsafe", "risky", "perilous"],
+    t17: ["male slave", "enslaved man", "male enslaved person"],
+    t20: ["throng"],
+    t22: ["roadway"]
+  };
+  VOCAB.forEach(v => v.meanings.push(...(ENGLISH_EQUIVALENTS[v.id] || [])));
   let direction = "le", requireMacrons = false;
   const TOPICS = VOCAB.map(v => ({id:v.id,name:v.latin,color:"#8c1c22",facts:[v.english]}));
   const KEYWORDS = [];
@@ -448,6 +459,26 @@
     if (!requireMacrons) n = n.normalize("NFD").replace(/\u0304/g, "").normalize("NFC");
     return n;
   };
+  function englishNorm(value) {
+    return value.normalize("NFC").toLowerCase().trim()
+      .replace(/[’‘]/g, "'")
+      .replace(/\bi'm\b/g, "i am").replace(/\byou're\b/g, "you are")
+      .replace(/\bhe's\b/g, "he is").replace(/\bshe's\b/g, "she is").replace(/\bit's\b/g, "it is")
+      .replace(/[.!?]/g, "").replace(/\s+/g, " ").replace(/^(?:a|an|the) /, "").trim();
+  }
+  function acceptsWritten(q, value) {
+    if (q.dir === "el") return q.accepted.some(a => norm(value) === norm(a));
+    const text = englishNorm(value);
+    const accepted = new Set(q.accepted.map(englishNorm));
+    if (accepted.has(text)) return true;
+    // Split meanings, not individual words: "in front of" retains its order.
+    const parts = text.split(/\s*(?:[,/;&]|\b(?:or|and)\b)\s*/).map(englishNorm);
+    if (!parts.length || parts.some(p => !p)) return false;
+    // A shared final "is" applies to each pronoun: "she / he / it is".
+    const sharedIs = q.topic === "t25" && parts.some(p => /^(he|she|it) is$/.test(p))
+      && parts.every(p => /^(he|she|it)( is)?$/.test(p));
+    return parts.every(p => accepted.has(sharedIs && /^(he|she|it)$/.test(p) ? p + " is" : p));
+  }
   const diffHtml = (want, got) => [...want].map((c, i) => got[i] !== undefined && got[i].toLowerCase() === c.toLowerCase() ? esc(c) : `<span class="x">${esc(c)}</span>`).join("");
   modes.spell = {
     enter() { startScreen("spell"); },
@@ -471,7 +502,7 @@
     check() {
       const r = this.r, q = r.qs[r.i]; if (r.done) return;
       const inp = panel.querySelector("#ans"), fb = panel.querySelector("#fb"), v = inp.value; if (!v.trim()) return;
-      if (q.accepted.some(a => norm(v) === norm(a))) {
+      if (acceptsWritten(q, v)) {
         r.done = true; const first = !r.wrong; record(q.id, first); if (first) r.score++; else r.missed.push(q.id);
         fb.className = "fb good"; fb.textContent = first ? `Correct! ${q.answer}` : "Now you've got it!";
         panel.querySelector("#after").innerHTML = ""; inp.blur();
