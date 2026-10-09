@@ -66,7 +66,7 @@ tools/roman-map/          build.py for the Roman map data (needs Natural Earth g
 
 - **Learn** tab: tap anything to see its facts; a "hide labels" test-yourself switch.
 - **Tap-to-answer with a word bank** (tests usually have one) as the main quiz.
-- **Spelling ★** as a separate, harder tab: strict letters, capitals don't matter; a miss shows the right
+- **Spelling ★** as a separate, harder tab: spelling counts, capitals and spacing do not matter; a miss shows the right
   spelling with wrong letters in red and she must retype it correctly to continue.
 - **Stars:** +1 for right on the first try, -1 for a miss, 3 = mastered. Rounds ask weakest first;
   "Practice these" after a round; "Practice weak spots".
@@ -84,3 +84,12 @@ tools/roman-map/          build.py for the Roman map data (needs Natural Earth g
 - Each guide keeps its own localStorage key so stars never collide. Don't rename an existing key (it erases stars).
 - Don't break existing guides; if you change shared files (`launcher.*`, `apps.json`), check the home pages.
 - Writing style: no em dashes (use `--`).
+
+## Written-answer checking (all future guides)
+
+- Check knowledge and spelling, not formatting. Ignore capitalization and missing, extra, or misplaced whitespace, including tabs and newlines. For example, `apartmentbuilding` = `apartment building`, and `s heis` = `she is`. Preserve the order of letters within each meaning so misspellings still fail.
+- Accept any listed form or meaning and confirmed equivalent wording. Keep the original sheet wording in Learn and answer keys; document supplemental equivalents in help.html and the parent report. Use explicit per-question accepted answers, not fuzzy matching or automatic broad synonyms.
+- When the answer lists alternative meanings, accept any valid subset in any order, with slash, comma, semicolon, `or`, `and`, or `&` separators. Every supplied meaning must be valid. Reorder alternatives, not words within phrases (`in front of` must not become `front of in`). Support shared wording where appropriate: `she/he/it is` = `he/she/it is`, while `he/she are` is wrong.
+- Ignore incidental punctuation when it does not change meaning. Preserve meaningful signs, units, decimal points, and required language marks. Macrons remain a separately configurable requirement; ignoring spaces must not bypass strict macron checking.
+- Start from template/app.js: `q.answer` preserves the sheet answer, optional `q.accepted` lists equivalent complete answers, and optional `q.answerGroups` groups equivalent phrasings for each alternative meaning. Adapt language-specific contractions and shared words explicitly, following the Suburani guide example.
+- Verify missing/extra spaces, reordered alternatives, equivalent wording, one real misspelling, and an answer containing an incorrect extra meaning. Also verify strict language marks when enabled. Do not change existing localStorage keys.

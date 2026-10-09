@@ -457,7 +457,7 @@
   const norm = s => {
     let n = s.normalize("NFC").toLowerCase().trim().replace(/\s+/g," ").replace(/\?$/, "");
     if (!requireMacrons) n = n.normalize("NFD").replace(/\u0304/g, "").normalize("NFC");
-    return n;
+    return n.replace(/\s+/g, "");
   };
   function englishNorm(value) {
     return value.normalize("NFC").toLowerCase().trim()
@@ -466,18 +466,19 @@
       .replace(/\bhe's\b/g, "he is").replace(/\bshe's\b/g, "she is").replace(/\bit's\b/g, "it is")
       .replace(/[.!?]/g, "").replace(/\s+/g, " ").replace(/^(?:a|an|the) /, "").trim();
   }
+  const englishKey = value => englishNorm(value).replace(/\s+/g, "");
   function acceptsWritten(q, value) {
     if (q.dir === "el") return q.accepted.some(a => norm(value) === norm(a));
     const text = englishNorm(value);
-    const accepted = new Set(q.accepted.map(englishNorm));
-    if (accepted.has(text)) return true;
+    const accepted = new Set(q.accepted.map(englishKey));
+    if (accepted.has(englishKey(text))) return true;
     // Split meanings, not individual words: "in front of" retains its order.
     const parts = text.split(/\s*(?:[,/;&]|\b(?:or|and)\b)\s*/).map(englishNorm);
     if (!parts.length || parts.some(p => !p)) return false;
     // A shared final "is" applies to each pronoun: "she / he / it is".
-    const sharedIs = q.topic === "t25" && parts.some(p => /^(he|she|it) is$/.test(p))
-      && parts.every(p => /^(he|she|it)( is)?$/.test(p));
-    return parts.every(p => accepted.has(sharedIs && /^(he|she|it)$/.test(p) ? p + " is" : p));
+    const sharedIs = q.topic === "t25" && parts.some(p => /^(he|she|it)is$/.test(englishKey(p)))
+      && parts.every(p => /^(he|she|it)(is)?$/.test(englishKey(p)));
+    return parts.every(p => accepted.has(sharedIs && /^(he|she|it)$/.test(englishKey(p)) ? englishKey(p) + "is" : englishKey(p)));
   }
   const diffHtml = (want, got) => [...want].map((c, i) => got[i] !== undefined && got[i].toLowerCase() === c.toLowerCase() ? esc(c) : `<span class="x">${esc(c)}</span>`).join("");
   modes.spell = {

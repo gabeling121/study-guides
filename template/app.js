@@ -14,7 +14,7 @@
   const KEYWORDS = [["Word", "what it means"]];
   // Word banks (the test likely has one)
   const BANK = ["Topic one", "Topic two"];
-  // Questions. mode: "quiz" (tap from word bank) or "spell" (type it; spelling counts, capitals don't).
+  // Questions. mode: "quiz" (tap from word bank) or "spell" (type it; spelling counts, capitals and spacing don't).
   // topic: which Learn card to show after a miss.
   const Q = [
     { id: "q1", mode: "quiz", prompt: "Which topic has the first fact?", answer: "Topic one", bank: BANK, topic: "t1" },
@@ -101,7 +101,18 @@
       else { panel.querySelector("#after").innerHTML = `${card(q.topic)}<button class="btn primary" id="next">Next</button>`; panel.querySelector("#next").onclick = next; }
     },
   };
-  const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim().replace(/^the /, "");
+  // Preserve letters, accents, digits, and meaningful symbols. Ignore spacing and case.
+  // Put confirmed equivalent wordings in q.accepted; keep q.answer as the sheet's answer.
+  const norm = s => s.normalize("NFC").toLowerCase().trim().replace(/^the\s+/, "").replace(/\s+/g, "");
+  function acceptsWritten(q, value) {
+    const accepted = q.accepted || [q.answer];
+    if (accepted.some(a => norm(value) === norm(a))) return true;
+    // Optional meaning groups: each group lists equivalent phrasings for one meaning.
+    // A child may supply any subset, in any order, but every supplied meaning must be valid.
+    if (!q.answerGroups) return false;
+    const parts = value.split(/\s*(?:[,/;&]|\b(?:or|and)\b)\s*/i);
+    return parts.length > 0 && parts.every(p => p.trim() && q.answerGroups.some(group => group.some(a => norm(p) === norm(a))));
+  }
   const diffHtml = (want, got) => [...want].map((c, i) => got[i] !== undefined && got[i].toLowerCase() === c.toLowerCase() ? esc(c) : `<span class="x">${esc(c)}</span>`).join("");
   modes.spell = {
     enter() { startScreen("spell"); },
@@ -120,7 +131,7 @@
     check() {
       const r = this.r, q = r.qs[r.i]; if (r.done) return;
       const inp = panel.querySelector("#ans"), fb = panel.querySelector("#fb"), v = inp.value; if (!v.trim()) return;
-      if (norm(v) === norm(q.answer)) {
+      if (acceptsWritten(q, v)) {
         r.done = true; const first = !r.wrong; record(q.id, first); if (first) r.score++; else r.missed.push(q.id);
         fb.className = "fb good"; fb.textContent = first ? `Correct! ${q.answer}` : "Now you've got it!";
         panel.querySelector("#after").innerHTML = ""; inp.blur();
