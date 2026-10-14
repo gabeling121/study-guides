@@ -123,6 +123,41 @@
           "hash": "print=key"
         }
       ]
+    },
+    {
+      "grade": "7th-grade",
+      "id": "mythology",
+      "title": "Mythology",
+      "subject": "Latin / Mythology",
+      "emoji": "🏛️",
+      "description": "Greek and Roman gods, heroes, and monsters: 468 questions, matching, word bank, multiple choice, and written practice.",
+      "added": "2026-10-13",
+      "stats": {
+        "key": "mythology_stats",
+        "total": 1404
+      },
+      "printables": [
+        {
+          "title": "Mixed practice sheet",
+          "file": "Mythology - Practice.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Practice answer key",
+          "file": "Mythology - Answer Key.pdf",
+          "hash": "print=key"
+        },
+        {
+          "title": "All questions booklet",
+          "file": "Mythology - All Questions.pdf",
+          "hash": "print=blank&full=1"
+        },
+        {
+          "title": "All answers booklet",
+          "file": "Mythology - All Answers.pdf",
+          "hash": "print=key&full=1"
+        }
+      ]
     }
   ]
 }
