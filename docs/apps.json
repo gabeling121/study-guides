@@ -183,6 +183,41 @@
           "hash": "print=key"
         }
       ]
+    },
+    {
+      "grade": "7th-grade",
+      "id": "supreme-deities",
+      "title": "Twelve Supreme Deities",
+      "subject": "Latin / Mythology",
+      "emoji": "🏛️",
+      "description": "Memorize the names, realms, symbols, Roman Trinity, and relationships from the complete deity chart.",
+      "added": "2026-10-14",
+      "stats": {
+        "key": "supremedeities_stats",
+        "total": 357
+      },
+      "printables": [
+        {
+          "title": "Practice sheet",
+          "file": "Supreme Deities - Practice.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Answer key",
+          "file": "Supreme Deities - Answer Key.pdf",
+          "hash": "print=key"
+        },
+        {
+          "title": "All questions",
+          "file": "Supreme Deities - All Questions.pdf",
+          "hash": "print=blank&full=1"
+        },
+        {
+          "title": "All answers",
+          "file": "Supreme Deities - All Answers.pdf",
+          "hash": "print=key&full=1"
+        }
+      ]
     }
   ]
 }
