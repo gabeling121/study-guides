@@ -1,5 +1,5 @@
 // Offline support: cache the app files, work offline.
-const CACHE = "supremedeities-v1";   // rename per guide, e.g. "fractions-v1"
+const CACHE = "supremedeities-v2";   // rename per guide, e.g. "fractions-v1"
 const FILES = ["./", "index.html", "style.css", "app.js", "manifest.json", "content.js", "help.html", "source.html", "source.md",
   "icon-180.png", "icon-192.png", "icon-512.png"];
 
