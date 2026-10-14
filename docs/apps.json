@@ -158,6 +158,31 @@
           "hash": "print=key&full=1"
         }
       ]
+    },
+    {
+      "grade": "7th-grade",
+      "id": "god-names",
+      "title": "Roman & Greek God Names",
+      "subject": "Latin / Mythology",
+      "emoji": "⚡",
+      "description": "Memorize all 12 name pairs with flashcards, matching, and quizzes in both directions.",
+      "added": "2026-10-14",
+      "stats": {
+        "key": "godnames_stats",
+        "total": 72
+      },
+      "printables": [
+        {
+          "title": "Name pairs worksheet",
+          "file": "God Names - Worksheet.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Answer key",
+          "file": "God Names - Answer Key.pdf",
+          "hash": "print=key"
+        }
+      ]
     }
   ]
 }
