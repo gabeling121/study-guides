@@ -260,11 +260,11 @@
       "title": "Guess the Story",
       "subject": "Latin / Mythology",
       "emoji": "📖",
-      "description": "Guess 25 story and creature titles from their descriptions, then review missed stories.",
+      "description": "Guess story and creature titles, and practice Hercules’ twelve labors by name, number, and full order.",
       "added": "2026-10-14",
       "stats": {
         "key": "guessstory_stats",
-        "total": 75
+        "total": 150
       },
       "printables": [
         {

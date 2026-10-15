@@ -25,3 +25,18 @@
 | Geryon | A tripartite monster who is depicted as either a Siameses triplet with three bodies joined at the hips or with three upper torsos growing from one lower body. Since each of Geryon’s heads preferred special foods, Hercules was able to force the monster to kill itself by placing its special foods at opposite ends of a clearing after forcing the monster to work up an appetite by chasing him. Depending on its depiction, the monster either tore itself to pieces trying to get to its special foods or starved to death since each head was unwilling to let the other eat first. |
 | Lernean Hydra | A water serpent with nine heads. When Hercules tried to kill it (as his second labor) by cutting off its heads, two would grow back from each severed neck. Hercules finally accepted forbidden help from his charioteer, Iolaus, who burned each severed neck with a torch before the heads could grow again. The hydra’s last head was immortal and had to be buried under a boulder by Hercules. |
 | Vultures | Carrion birds (i.e., they eat dead flesh). They are sacred to Mars/Ares, the god of war, because they help to clean the fields of battle after the fighting is finished. Since these birds are sacred, they were considered good omens by Romulus and Remus when they were competing to name their new city. |
+
+## Hercules’ labors in order
+
+1. Nemean Lion
+2. Lernean Hydra
+3. Cerynitian hind
+4. Erymanthian boar
+5. Augeian stables
+6. Stymphalian birds
+7. Cretan bull
+8. mares of Diomedes
+9. Hippolyte’s belt
+10. cattle of Geryon
+11. apples of the Hesperides
+12. Cerberus

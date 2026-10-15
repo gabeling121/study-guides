@@ -7,6 +7,10 @@ window.MYTHOLOGY = {
     {
       "id": "creatures",
       "name": "Creatures & monsters"
+    },
+    {
+      "id": "labors",
+      "name": "Hercules’ Labors -- in order"
     }
   ],
   "topics": [
@@ -258,6 +262,126 @@ window.MYTHOLOGY = {
       ],
       "facts": [
         "Carrion birds (i.e., they eat dead flesh). They are sacred to Mars/Ares, the god of war, because they help to clean the fields of battle after the fighting is finished. Since these birds are sacred, they were considered good omens by Romulus and Remus when they were competing to name their new city."
+      ]
+    },
+    {
+      "id": "labor1",
+      "name": "Labor 1",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Nemean Lion"
+      ]
+    },
+    {
+      "id": "labor2",
+      "name": "Labor 2",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Lernean Hydra"
+      ]
+    },
+    {
+      "id": "labor3",
+      "name": "Labor 3",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Cerynitian hind"
+      ]
+    },
+    {
+      "id": "labor4",
+      "name": "Labor 4",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Erymanthian boar"
+      ]
+    },
+    {
+      "id": "labor5",
+      "name": "Labor 5",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Augeian stables"
+      ]
+    },
+    {
+      "id": "labor6",
+      "name": "Labor 6",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Stymphalian birds"
+      ]
+    },
+    {
+      "id": "labor7",
+      "name": "Labor 7",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Cretan bull"
+      ]
+    },
+    {
+      "id": "labor8",
+      "name": "Labor 8",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "mares of Diomedes"
+      ]
+    },
+    {
+      "id": "labor9",
+      "name": "Labor 9",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Hippolyte’s belt"
+      ]
+    },
+    {
+      "id": "labor10",
+      "name": "Labor 10",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "cattle of Geryon"
+      ]
+    },
+    {
+      "id": "labor11",
+      "name": "Labor 11",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "apples of the Hesperides"
+      ]
+    },
+    {
+      "id": "labor12",
+      "name": "Labor 12",
+      "sections": [
+        "labors"
+      ],
+      "facts": [
+        "Cerberus"
       ]
     }
   ],
@@ -621,6 +745,440 @@ window.MYTHOLOGY = {
         "Vultures"
       ],
       "kind": "title"
+    },
+    {
+      "id": "labor-name-1",
+      "topic": "labor1",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #1?",
+      "shortPrompt": "Labor #1",
+      "answer": "Nemean Lion",
+      "accepted": [
+        "Nemean Lion",
+        "the Nemean Lion"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-1",
+      "topic": "labor1",
+      "section": "labors",
+      "prompt": "Which labor number was Nemean Lion?",
+      "shortPrompt": "Which number: Nemean Lion?",
+      "answer": "1",
+      "accepted": [
+        "1",
+        "one",
+        "first",
+        "1st",
+        "labor 1",
+        "first labor",
+        "#1"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-2",
+      "topic": "labor2",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #2?",
+      "shortPrompt": "Labor #2",
+      "answer": "Lernean Hydra",
+      "accepted": [
+        "Lernean Hydra",
+        "the Lernean Hydra"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-2",
+      "topic": "labor2",
+      "section": "labors",
+      "prompt": "Which labor number was Lernean Hydra?",
+      "shortPrompt": "Which number: Lernean Hydra?",
+      "answer": "2",
+      "accepted": [
+        "2",
+        "two",
+        "second",
+        "2nd",
+        "labor 2",
+        "second labor",
+        "#2"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-3",
+      "topic": "labor3",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #3?",
+      "shortPrompt": "Labor #3",
+      "answer": "Cerynitian hind",
+      "accepted": [
+        "Cerynitian hind",
+        "the Cerynitian hind"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-3",
+      "topic": "labor3",
+      "section": "labors",
+      "prompt": "Which labor number was Cerynitian hind?",
+      "shortPrompt": "Which number: Cerynitian hind?",
+      "answer": "3",
+      "accepted": [
+        "3",
+        "three",
+        "third",
+        "3rd",
+        "labor 3",
+        "third labor",
+        "#3"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-4",
+      "topic": "labor4",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #4?",
+      "shortPrompt": "Labor #4",
+      "answer": "Erymanthian boar",
+      "accepted": [
+        "Erymanthian boar",
+        "the Erymanthian boar"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-4",
+      "topic": "labor4",
+      "section": "labors",
+      "prompt": "Which labor number was Erymanthian boar?",
+      "shortPrompt": "Which number: Erymanthian boar?",
+      "answer": "4",
+      "accepted": [
+        "4",
+        "four",
+        "fourth",
+        "4th",
+        "labor 4",
+        "fourth labor",
+        "#4"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-5",
+      "topic": "labor5",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #5?",
+      "shortPrompt": "Labor #5",
+      "answer": "Augeian stables",
+      "accepted": [
+        "Augeian stables",
+        "the Augeian stables"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-5",
+      "topic": "labor5",
+      "section": "labors",
+      "prompt": "Which labor number was Augeian stables?",
+      "shortPrompt": "Which number: Augeian stables?",
+      "answer": "5",
+      "accepted": [
+        "5",
+        "five",
+        "fifth",
+        "5th",
+        "labor 5",
+        "fifth labor",
+        "#5"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-6",
+      "topic": "labor6",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #6?",
+      "shortPrompt": "Labor #6",
+      "answer": "Stymphalian birds",
+      "accepted": [
+        "Stymphalian birds",
+        "the Stymphalian birds"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-6",
+      "topic": "labor6",
+      "section": "labors",
+      "prompt": "Which labor number was Stymphalian birds?",
+      "shortPrompt": "Which number: Stymphalian birds?",
+      "answer": "6",
+      "accepted": [
+        "6",
+        "six",
+        "sixth",
+        "6th",
+        "labor 6",
+        "sixth labor",
+        "#6"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-7",
+      "topic": "labor7",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #7?",
+      "shortPrompt": "Labor #7",
+      "answer": "Cretan bull",
+      "accepted": [
+        "Cretan bull",
+        "the Cretan bull"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-7",
+      "topic": "labor7",
+      "section": "labors",
+      "prompt": "Which labor number was Cretan bull?",
+      "shortPrompt": "Which number: Cretan bull?",
+      "answer": "7",
+      "accepted": [
+        "7",
+        "seven",
+        "seventh",
+        "7th",
+        "labor 7",
+        "seventh labor",
+        "#7"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-8",
+      "topic": "labor8",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #8?",
+      "shortPrompt": "Labor #8",
+      "answer": "mares of Diomedes",
+      "accepted": [
+        "mares of Diomedes",
+        "the mares of Diomedes"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-8",
+      "topic": "labor8",
+      "section": "labors",
+      "prompt": "Which labor number was mares of Diomedes?",
+      "shortPrompt": "Which number: mares of Diomedes?",
+      "answer": "8",
+      "accepted": [
+        "8",
+        "eight",
+        "eighth",
+        "8th",
+        "labor 8",
+        "eighth labor",
+        "#8"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-9",
+      "topic": "labor9",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #9?",
+      "shortPrompt": "Labor #9",
+      "answer": "Hippolyte’s belt",
+      "accepted": [
+        "Hippolyte’s belt",
+        "the Hippolyte’s belt"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-9",
+      "topic": "labor9",
+      "section": "labors",
+      "prompt": "Which labor number was Hippolyte’s belt?",
+      "shortPrompt": "Which number: Hippolyte’s belt?",
+      "answer": "9",
+      "accepted": [
+        "9",
+        "nine",
+        "ninth",
+        "9th",
+        "labor 9",
+        "ninth labor",
+        "#9"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-10",
+      "topic": "labor10",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #10?",
+      "shortPrompt": "Labor #10",
+      "answer": "cattle of Geryon",
+      "accepted": [
+        "cattle of Geryon",
+        "the cattle of Geryon"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-10",
+      "topic": "labor10",
+      "section": "labors",
+      "prompt": "Which labor number was cattle of Geryon?",
+      "shortPrompt": "Which number: cattle of Geryon?",
+      "answer": "10",
+      "accepted": [
+        "10",
+        "ten",
+        "tenth",
+        "10th",
+        "labor 10",
+        "tenth labor",
+        "#10"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-11",
+      "topic": "labor11",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #11?",
+      "shortPrompt": "Labor #11",
+      "answer": "apples of the Hesperides",
+      "accepted": [
+        "apples of the Hesperides",
+        "the apples of the Hesperides"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-11",
+      "topic": "labor11",
+      "section": "labors",
+      "prompt": "Which labor number was apples of the Hesperides?",
+      "shortPrompt": "Which number: apples of the Hesperides?",
+      "answer": "11",
+      "accepted": [
+        "11",
+        "eleven",
+        "eleventh",
+        "11th",
+        "labor 11",
+        "eleventh labor",
+        "#11"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-name-12",
+      "topic": "labor12",
+      "section": "labors",
+      "prompt": "What was Hercules’s labor #12?",
+      "shortPrompt": "Labor #12",
+      "answer": "Cerberus",
+      "accepted": [
+        "Cerberus",
+        "the Cerberus"
+      ],
+      "kind": "labor-name"
+    },
+    {
+      "id": "labor-number-12",
+      "topic": "labor12",
+      "section": "labors",
+      "prompt": "Which labor number was Cerberus?",
+      "shortPrompt": "Which number: Cerberus?",
+      "answer": "12",
+      "accepted": [
+        "12",
+        "twelve",
+        "twelfth",
+        "12th",
+        "labor 12",
+        "twelfth labor",
+        "#12"
+      ],
+      "kind": "labor-number"
+    },
+    {
+      "id": "labor-full-order",
+      "topic": "labor1",
+      "section": "labors",
+      "prompt": "List all twelve of Hercules’s labors in order. Separate them with commas or semicolons.",
+      "answer": "Nemean Lion; Lernean Hydra; Cerynitian hind; Erymanthian boar; Augeian stables; Stymphalian birds; Cretan bull; mares of Diomedes; Hippolyte’s belt; cattle of Geryon; apples of the Hesperides; Cerberus",
+      "accepted": [
+        "Nemean Lion; Lernean Hydra; Cerynitian hind; Erymanthian boar; Augeian stables; Stymphalian birds; Cretan bull; mares of Diomedes; Hippolyte’s belt; cattle of Geryon; apples of the Hesperides; Cerberus"
+      ],
+      "items": [
+        [
+          "Nemean Lion",
+          "the Nemean Lion"
+        ],
+        [
+          "Lernean Hydra",
+          "the Lernean Hydra"
+        ],
+        [
+          "Cerynitian hind",
+          "the Cerynitian hind"
+        ],
+        [
+          "Erymanthian boar",
+          "the Erymanthian boar"
+        ],
+        [
+          "Augeian stables",
+          "the Augeian stables"
+        ],
+        [
+          "Stymphalian birds",
+          "the Stymphalian birds"
+        ],
+        [
+          "Cretan bull",
+          "the Cretan bull"
+        ],
+        [
+          "mares of Diomedes",
+          "the mares of Diomedes"
+        ],
+        [
+          "Hippolyte’s belt",
+          "the Hippolyte’s belt"
+        ],
+        [
+          "cattle of Geryon",
+          "the cattle of Geryon"
+        ],
+        [
+          "apples of the Hesperides",
+          "the apples of the Hesperides"
+        ],
+        [
+          "Cerberus",
+          "the Cerberus"
+        ]
+      ],
+      "ordered": true,
+      "kind": "labor-order"
     }
   ]
 };
