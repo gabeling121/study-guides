@@ -288,6 +288,31 @@
           "hash": "print=key&full=1"
         }
       ]
+    },
+    {
+      "grade": "4th-grade",
+      "id": "plate-tectonics",
+      "title": "Plate Tectonics & Volcanoes",
+      "subject": "Science",
+      "emoji": "🌋",
+      "description": "Learn Earth's layers, moving plates, and volcanoes. Practice concepts, spelling, and explanations.",
+      "added": "2026-10-18",
+      "stats": {
+        "key": "plate_tectonics_stats",
+        "total": 52
+      },
+      "printables": [
+        {
+          "title": "Practice sheet",
+          "file": "Plate Tectonics - Practice.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Answer key",
+          "file": "Plate Tectonics - Answer Key.pdf",
+          "hash": "print=key"
+        }
+      ]
     }
   ]
 }
