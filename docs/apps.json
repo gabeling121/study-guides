@@ -313,6 +313,31 @@
           "hash": "print=key"
         }
       ]
+    },
+    {
+      "grade": "7th-grade",
+      "id": "suburani-grammar-1-2",
+      "title": "Suburani Chapters 1-2: Grammar",
+      "subject": "Latin / Grammar",
+      "emoji": "🏛️",
+      "description": "Master the verb chart, conjugation identifiers, grammar, and third-declension endings with required macrons.",
+      "added": "2026-10-30",
+      "stats": {
+        "key": "suburani_grammar12_stats",
+        "total": 128
+      },
+      "printables": [
+        {
+          "title": "Grammar practice sheet",
+          "file": "Suburani Grammar 1-2 - Practice.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Grammar answer key",
+          "file": "Suburani Grammar 1-2 - Answer Key.pdf",
+          "hash": "print=key"
+        }
+      ]
     }
   ]
 }
