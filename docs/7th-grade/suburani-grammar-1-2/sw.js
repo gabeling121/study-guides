@@ -1,6 +1,6 @@
 // Offline support: cache the app files, work offline.
-const CACHE = "suburani-grammar12-v2";   // rename per guide, e.g. "fractions-v1"
-const FILES = ["./", "index.html", "style.css", "app.js", "manifest.json", "help.html", "style.css?v=2", "app.js?v=2",
+const CACHE = "suburani-grammar12-v3";   // rename per guide, e.g. "fractions-v1"
+const FILES = ["./", "index.html", "style.css", "app.js", "manifest.json", "help.html", "style.css?v=3", "app.js?v=3",
   "icon-180.png", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {
