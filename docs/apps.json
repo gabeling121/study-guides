@@ -16,6 +16,41 @@
   "apps": [
     {
       "grade": "7th-grade",
+      "id": "latin-vocabulary",
+      "title": "Latin Vocabulary Practice",
+      "subject": "Latin",
+      "emoji": "📜",
+      "description": "Fill in the blank in either direction for 30 Latin vocabulary entries.",
+      "added": "2026-11-22",
+      "stats": {
+        "key": "latin_vocabulary_stats",
+        "total": 120
+      },
+      "printables": [
+        {
+          "title": "Latin to English worksheet",
+          "file": "Latin Vocabulary Practice - Latin to English Worksheet.pdf",
+          "hash": "print=blank"
+        },
+        {
+          "title": "Latin to English answer key",
+          "file": "Latin Vocabulary Practice - Latin to English Answer Key.pdf",
+          "hash": "print=key"
+        },
+        {
+          "title": "English to Latin worksheet",
+          "file": "Latin Vocabulary Practice - English to Latin Worksheet.pdf",
+          "hash": "print=blank&dir=el"
+        },
+        {
+          "title": "English to Latin answer key",
+          "file": "Latin Vocabulary Practice - English to Latin Answer Key.pdf",
+          "hash": "print=key&dir=el"
+        }
+      ]
+    },
+    {
+      "grade": "7th-grade",
       "id": "roman-map",
       "title": "Roman World Map",
       "subject": "Latin / Geography",
